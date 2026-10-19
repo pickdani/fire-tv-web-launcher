@@ -18,5 +18,5 @@ jobs:
         run: ./gradlew --no-daemon assembleRelease
       - uses: actions/upload-artifact@v4
         with:
-          name: tv-home-apk
+          name: fire-tv-web-launcher-apk
           path: app/build/outputs/apk/release/app-release.apk
