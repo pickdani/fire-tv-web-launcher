@@ -87,7 +87,9 @@ Build the APK with `./gradlew assembleRelease`, or build and install it with
 - Write short comments that say *why*, not *what*.
 - Kotlin: follow the [Kotlin style guide](https://kotlinlang.org/docs/coding-conventions.html).
 - Do not add libraries unless there is no simple way without them.
-- Do not add tracking or analytics.
+- Do not add tracking, analytics, or personal data (names, emails, IP addresses).
+- Do not run `am force-stop dev.tvhome`. Android then turns off the Home button service.
+  To reload the page, run `adb shell am start -n dev.tvhome/.MainActivity --ez reload true`.
 
 ## Test a change
 

@@ -65,4 +65,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-[MIT](LICENSE.md). The photos have their own licenses: see [CREDITS.md](CREDITS.md).
+[MIT](LICENSE.md). The photos have their own licenses (below).
+
+## Credits
+
+- Photos from Wikimedia Commons, cropped and resized. The app icon and banner come from the first photo.
+  - [Charles River Esplanade](https://commons.wikimedia.org/wiki/File:Charles_River_Esplanade_Boston_November_2016_003.jpg)
+    by King of Hearts, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+  - [Boston Common in fall](https://commons.wikimedia.org/wiki/File:Boston_Common_in_fall.jpg)
+    by Chase Elliott Clark, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  - [Boston Public Garden](https://commons.wikimedia.org/wiki/File:Boston_Public_Garden_November_2016_004.jpg)
+    by King of Hearts, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- Weather data from [Open-Meteo](https://open-meteo.com), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0).
