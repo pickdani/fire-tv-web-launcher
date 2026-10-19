@@ -1,11 +1,13 @@
 # TV Home
 
-An open-source home screen for Fire TV. The home screen is a web page, so you can change it
-with HTML, CSS, and JavaScript.
+An open-source custom launcher for Amazon Fire TV, Fire TV Stick, and Fire TV Edition TVs
+(Insignia, Toshiba). The home screen is a web page, so you can change it with HTML, CSS, and
+JavaScript.
 
 - Shows your favorite apps, the time, the weather, and a background photo.
 - Replaces the Amazon home screen when you push Home. No root needed.
 - Has no ads and no tracking.
+- Includes an optional script that disables Amazon ads, tracking, and bloatware over ADB.
 
 Tested on Fire OS 8.1 (Android 11).
 
@@ -50,10 +52,17 @@ speeds up animations. `tools/debloat.sh <tv-ip> restore` undoes it.
 - A Fire OS update can stop the Home button method from working.
 - A force-stop of TV Home turns off the Home button service. Run `tools/install.sh` again.
 
+## Compared to other launchers
+
+[Projectivy Launcher](https://play.google.com/store/apps/details?id=com.spocky.projengmenu)
+and [LTvLauncher](https://github.com/leanbitlab-org/LtvLauncher) also replace the Fire TV home
+screen. Projectivy is not open source. LTvLauncher's Home button method did not work on
+Fire OS 8.1.8 in our tests. TV Home is open source, and you design the whole screen yourself.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-[GPL-3.0](LICENSE). The photos have their own licenses: see [CREDITS.md](CREDITS.md).
+[MIT](LICENSE.md). The photos have their own licenses: see [CREDITS.md](CREDITS.md).
