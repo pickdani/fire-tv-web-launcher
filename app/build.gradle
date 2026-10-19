@@ -1,0 +1,40 @@
+plugins {
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+}
+
+android {
+    namespace "dev.tvhome"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "dev.tvhome"
+        minSdk 25
+        // 29 keeps plain file access to /sdcard/tvhome on Android 11 (requestLegacyExternalStorage).
+        targetSdk 29
+        versionCode 1
+        versionName "0.1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Personal sideload build: sign with the local debug key.
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    lint {
+        // Sideloaded, not on Google Play. See targetSdk above.
+        disable "ExpiredTargetSdkVersion"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}

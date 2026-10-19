@@ -1,0 +1,140 @@
+:root {
+  --text: #ffffff;
+  --text-dim: rgba(255, 255, 255, 0.72);
+  --focus: #ffffff;
+  --card-radius: 14px;
+  --gutter: 64px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  color: var(--text);
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Two layers, so one background can fade into the next. */
+.background {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.background.shown { opacity: 1; }
+
+/* Darkens the photo behind the text and the app row. */
+#shade {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 30%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0) 75%);
+}
+
+header {
+  position: fixed;
+  top: 40px;
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+#time { font-size: 96px; font-weight: 300; line-height: 1; letter-spacing: -2px; }
+#date { font-size: 26px; color: var(--text-dim); margin-top: 8px; }
+
+#weather { text-align: right; }
+#weather-now { display: flex; align-items: center; justify-content: flex-end; gap: 16px; font-size: 64px; font-weight: 300; line-height: 1; }
+#weather-icon svg { display: block; width: 56px; height: 56px; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6)); }
+#weather-detail { font-size: 24px; color: var(--text-dim); margin-top: 10px; }
+
+main {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 110px;
+  max-height: calc(100% - 300px);
+  overflow: hidden;
+}
+
+h2 {
+  margin: 0 var(--gutter) 16px;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+  padding: 24px var(--gutter);
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 12px var(--gutter);
+  max-height: 520px;
+  overflow: hidden;
+}
+
+.app {
+  flex: 0 0 auto;
+  width: 256px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  padding: 0;
+  border-radius: var(--card-radius);
+  background: rgba(255, 255, 255, 0.12) center / cover no-repeat;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  outline: none;
+  transition: transform 120ms ease-out, box-shadow 120ms ease-out;
+  position: relative;
+}
+
+.grid .app { width: auto; }
+
+/* Apps with only a square icon: the icon centered on a dark card, with the name below. */
+.app.icon-only { background-size: 40%; background-color: rgba(30, 30, 30, 0.85); }
+.app .label {
+  position: absolute; left: 0; right: 0; bottom: 8px;
+  font-size: 16px; color: var(--text-dim); text-align: center;
+}
+
+.app:focus {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 4px var(--focus), 0 14px 36px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+footer {
+  position: fixed;
+  left: var(--gutter);
+  bottom: 40px;
+  display: flex;
+  gap: 16px;
+}
+
+.pill {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-size: 20px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.14);
+  outline: none;
+}
+
+.pill:focus { background: var(--focus); color: #000; }
