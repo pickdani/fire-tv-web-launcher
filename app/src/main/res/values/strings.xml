@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TV Home</string>
-    <string name="guard_label">TV Home: Home button</string>
-    <string name="guard_description">Opens TV Home when the stock Fire TV home screen appears. It reads no screen content.</string>
+    <string name="app_name">Fire TV Web Launcher</string>
+    <string name="guard_label">Fire TV Web Launcher: Home button</string>
+    <string name="guard_description">Opens Fire TV Web Launcher when the stock Fire TV home screen appears. It reads no screen content.</string>
 </resources>

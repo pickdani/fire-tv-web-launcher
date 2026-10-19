@@ -1,5 +1,5 @@
 #!/bin/sh
-# Builds TV Home, installs it, turns on the Home button service, and copies the page.
+# Builds Fire TV Web Launcher, installs it, turns on the Home button service, and copies the page.
 # Usage: tools/install.sh <tv-ip>
 #
 # Always install with this script. Android turns the Home button service off when the app
@@ -24,7 +24,7 @@ enable_guard() {
 }
 
 guard_running() {
-  tv_shell dumpsys accessibility | grep -q "Bound services:{Service\[label=TV Home"
+  tv_shell dumpsys accessibility | grep -q "Bound services:{Service\[label=Fire TV Web Launcher"
 }
 
 # Android clears the setting while it finishes the update, so wait, set it, and check it.

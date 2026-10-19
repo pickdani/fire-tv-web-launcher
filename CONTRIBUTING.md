@@ -4,7 +4,7 @@ Thanks for your help. Bug reports, ideas, and pull requests are all welcome.
 
 ## How it works
 
-TV Home has two parts:
+Fire TV Web Launcher has two parts:
 
 1. **The home page** (HTML, CSS, JavaScript) in `app/src/main/assets/home/`. It draws
    everything on the screen. Most changes go here.
@@ -28,7 +28,7 @@ app/src/main/
 │   ├── MainActivity.kt    The full-screen WebView
 │   ├── TvBridge.kt        The window.TV functions
 │   ├── HomeFiles.kt       Serves the page and the app icons to the WebView
-│   └── HomeGuardService.kt  Brings TV Home back when the Amazon home screen opens
+│   └── HomeGuardService.kt  Brings Fire TV Web Launcher back when the Amazon home screen opens
 └── res/xml/home_guard.xml What the Home button service can see
 tools/                     Scripts to install, push the page, live-edit, and debloat
 ```
@@ -37,7 +37,7 @@ tools/                     Scripts to install, push the page, live-edit, and deb
 
 Fire OS handles the Home button before apps can see it. So `HomeGuardService` is an
 accessibility service that watches for the Amazon home screen to open, and then opens
-TV Home on top of it. It gets only package names of windows. It cannot read the screen.
+Fire TV Web Launcher on top of it. It gets only package names of windows. It cannot read the screen.
 It runs in its own process, so it stays alive when Android frees the WebView's memory.
 
 ## Page API
@@ -57,7 +57,7 @@ The page calls Android through `window.TV` (see `TvBridge.kt`):
 `https://tvhome.local/icon/<pkg>` is the app's banner (320 × 180) or icon (192 × 192).
 
 Android calls these functions on the page if they exist: `onShow()`, `onHide()`,
-`onHome()` (Home pushed while TV Home is in front), `onBack()`, and `onAppsChanged()`.
+`onHome()` (Home pushed while Fire TV Web Launcher is in front), `onBack()`, and `onAppsChanged()`.
 
 ## Set up
 
@@ -96,7 +96,7 @@ Build the APK with `./gradlew assembleRelease`, or build and install it with
 Before you open a pull request, check these on a Fire TV:
 
 - [ ] The home page shows, and the arrow keys move between all buttons.
-- [ ] An app opens, and Home brings TV Home back.
+- [ ] An app opens, and Home brings Fire TV Web Launcher back.
 - [ ] "All apps" opens, and Back closes it.
 - [ ] After `tools/install.sh`, the Home button still works.
 

@@ -16,7 +16,7 @@ class TvBridge(private val activity: MainActivity) {
     @JavascriptInterface
     fun apps(): String {
         val pm = activity.packageManager
-        val seen = mutableSetOf(activity.packageName) // Do not list TV Home itself.
+        val seen = mutableSetOf(activity.packageName) // Do not list Fire TV Web Launcher itself.
         val result = JSONArray()
         for ((category, isTv) in listOf(Intent.CATEGORY_LEANBACK_LAUNCHER to true, Intent.CATEGORY_LAUNCHER to false)) {
             val intent = Intent(Intent.ACTION_MAIN).addCategory(category)

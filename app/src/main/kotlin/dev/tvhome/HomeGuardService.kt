@@ -9,10 +9,10 @@ import android.view.KeyEvent
 import android.view.accessibility.AccessibilityEvent
 
 /**
- * Keeps TV Home in front of the Amazon home screen.
+ * Keeps Fire TV Web Launcher in front of the Amazon home screen.
  *
  * Fire OS 8 handles the Home button before apps can see it, so catching the key alone does not work.
- * This service watches for the Amazon home screen to open and opens TV Home on top of it.
+ * This service watches for the Amazon home screen to open and opens Fire TV Web Launcher on top of it.
  *
  * It gets only window-change events (package names) and key events. It cannot read the screen.
  * See res/xml/home_guard.xml. It runs in its own small process (":guard" in the manifest),

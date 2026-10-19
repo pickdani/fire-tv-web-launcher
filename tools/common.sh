@@ -24,7 +24,7 @@ tv_shell() {
   adb -s "$TV" shell "$@"
 }
 
-# Reloads TV Home. Never force-stop it: Android turns off the Home button service on force-stop.
+# Reloads Fire TV Web Launcher. Never force-stop it: Android turns off the Home button service on force-stop.
 reload_tv_home() {
   tv_shell am start -n dev.tvhome/.MainActivity --ez reload true >/dev/null 2>&1
 }

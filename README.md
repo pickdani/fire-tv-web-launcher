@@ -1,4 +1,4 @@
-# TV Home
+# Fire TV Web Launcher
 
 An open-source custom launcher for Amazon Fire TV, Fire TV Stick, and Fire TV Edition TVs
 (Insignia, Toshiba). The home screen is a web page, so you can change it with HTML, CSS, and
@@ -48,16 +48,16 @@ speeds up animations. `tools/debloat.sh <tv-ip> restore` undoes it.
 
 ## Limits
 
-- The Amazon home screen can show for a moment before TV Home covers it.
+- The Amazon home screen can show for a moment before Fire TV Web Launcher covers it.
 - A Fire OS update can stop the Home button method from working.
-- A force-stop of TV Home turns off the Home button service. Run `tools/install.sh` again.
+- A force-stop of Fire TV Web Launcher turns off the Home button service. Run `tools/install.sh` again.
 
 ## Compared to other launchers
 
 [Projectivy Launcher](https://play.google.com/store/apps/details?id=com.spocky.projengmenu)
 and [LTvLauncher](https://github.com/leanbitlab-org/LtvLauncher) also replace the Fire TV home
 screen. Projectivy is not open source. LTvLauncher's Home button method did not work on
-Fire OS 8.1.8 in our tests. TV Home is open source, and you design the whole screen yourself.
+Fire OS 8.1.8 in our tests. Fire TV Web Launcher is open source, and you design the whole screen yourself.
 
 ## Contributing
 

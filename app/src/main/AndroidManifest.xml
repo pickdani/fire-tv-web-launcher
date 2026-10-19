@@ -40,7 +40,7 @@
         </activity>
 
         <!-- Own process: Android can free the WebView's memory while an app plays,
-             and the small guard stays alive to bring TV Home back. -->
+             and the small guard stays alive to bring Fire TV Web Launcher back. -->
         <service
             android:name=".HomeGuardService"
             android:process=":guard"

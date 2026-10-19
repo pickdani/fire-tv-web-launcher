@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copies the home page to the TV and reloads TV Home. No rebuild needed.
+# Copies the home page to the TV and reloads Fire TV Web Launcher. No rebuild needed.
 # Usage: tools/push.sh <tv-ip>
 set -e
 . "$(dirname "$0")/common.sh"
